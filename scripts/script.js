@@ -51,6 +51,7 @@ function initButtons() {
     dealerDeck.push(deal());
     dealerRound();
   })
+
 }
 
 function initCards() {
@@ -211,6 +212,8 @@ function resetGame() {
   dealerPoint = 0;
   initCards();
   winner = 0;
+  $('.your-cards').removeClass('win');
+  $('.dealer-cards').removeClass('win');
 }
 
 function dealerRound() {
