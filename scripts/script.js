@@ -6,16 +6,6 @@ let dealerPoint = 0;
 let inGame = false;
 let winner = 0; //0: 未定，1: 玩家贏，2: 莊家贏，3: 平手
 
-// bug
-// new game '勝'不會清除
-// new game 翻牌後原先的花色不會清除
-// 莊家一開始就贏了, ex. 莊家6點/玩家兩個A
-
-// 需新增功能
-// 點數相同告知莊家玩家平手
-// 試著新增一個 Deck 類別，讓 Deck 可以自行計算分數
-
-
 //頁面 ready 時，initCard() 初始化卡片
 $(document).ready(function() {
   initCards();
@@ -69,6 +59,8 @@ function initCards() {
   //   card.innerHTML = '㊙';
   // });
   $('.card div').html('㊙');
+  // 初始化牌組花色
+  $('.card span').html('');
 }
 
 //撲克牌
